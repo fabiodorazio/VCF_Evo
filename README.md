@@ -28,6 +28,25 @@ VCF-Evo is a framework for analysing how somatic variants change through time.
 Most variant-analysis pipelines treat a sequencing sample as a static snapshot. They identify mutations, annotate them, calculate mutation burden, examine substitution patterns, and sometimes infer mutational signatures.
 Longitudinal sequencing contains another layer of information. When the same individual is sequenced repeatedly, the allele frequency of a somatic mutation can be followed through time. These measurements provide information about the behaviour of the cell population carrying that mutation.
 
+```text
+variant detection
+       ↓
+longitudinal matching
+       ↓
+measurement uncertainty
+       ↓
+variant trajectories
+       ↓
+clonal growth
+       ↓
+relative fitness
+       ↓
+change in fitness
+       ↓
+clone competition
+       ↓
+participant-level somatic evolution
+```
 ## GSE178936 input
 
 The importer understands the ARCHER processed TSV/TSV.GZ columns including `participant_id`, `wave`, `chromosome`, `position`, `reference`, `mutation`, `DP`, `AO`, `UAO`, `AF`, annotations, and `X95MDAF`.
