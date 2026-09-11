@@ -23,6 +23,30 @@ python main.py ../inputs/chr20.variants_20072022.vcf
 ## 2. VCF Evo
 Clonal haematopoiesis becomes increasingly prevalent with age, clone size changes longitudinally, and the growth behaviour differs substantially by driver gene.   More recent work also reinforces the connection between clonal haematopoiesis, ageing and inflammatory biology [Hajishengallis & Chavakis, 2026](https://www.nature.com/articles/s41580-025-00936-y?utm_source=chatgpt.com).
 
+VCF-Evo is a framework for analysing how somatic variants change through time.
+
+Most variant-analysis pipelines treat a sequencing sample as a static snapshot. They identify mutations, annotate them, calculate mutation burden, examine substitution patterns, and sometimes infer mutational signatures.
+Longitudinal sequencing contains another layer of information. When the same individual is sequenced repeatedly, the allele frequency of a somatic mutation can be followed through time. These measurements provide information about the behaviour of the cell population carrying that mutation.
+
+```text
+variant detection
+       ↓
+longitudinal matching
+       ↓
+measurement uncertainty
+       ↓
+variant trajectories
+       ↓
+clonal growth
+       ↓
+relative fitness
+       ↓
+change in fitness
+       ↓
+clone competition
+       ↓
+participant-level somatic evolution
+```
 ## GSE178936 input
 
 The importer understands the ARCHER processed TSV/TSV.GZ columns including `participant_id`, `wave`, `chromosome`, `position`, `reference`, `mutation`, `DP`, `AO`, `UAO`, `AF`, annotations, and `X95MDAF`.
