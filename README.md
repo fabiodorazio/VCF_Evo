@@ -20,7 +20,7 @@ python main.py ../inputs/chr20.variants_20072022.vcf
 ```
 
 
-[!](VCF_Evo_sum.png)
+![](VCF_Evo_sum.png)
 
 ## 2. VCF Evo
 Clonal haematopoiesis becomes increasingly prevalent with age, clone size changes longitudinally, and the growth behaviour differs substantially by driver gene.   More recent work also reinforces the connection between clonal haematopoiesis, ageing and inflammatory biology [Hajishengallis & Chavakis, 2026](https://www.nature.com/articles/s41580-025-00936-y?utm_source=chatgpt.com).
